@@ -3,19 +3,19 @@
     "id": "1",
     "question": "What made you feel most alive today?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "2",
     "question": "What's something you're looking forward to, and why?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "3",
     "question": "What's a challenge you faced today and how did you handle it?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "4",
@@ -27,19 +27,19 @@
     "id": "5",
     "question": "What's something new you learned about yourself recently?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "6",
     "question": "What surprised you today?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "7",
     "question": "When did you feel most confident today?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "8",
@@ -51,49 +51,49 @@
     "id": "9",
     "question": "If you could have a conversation with your past self, what would you say?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "10",
     "question": "What's something you're curious about right now?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "11",
     "question": "Describe a moment today when you felt completely present.",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "12",
     "question": "What's a skill you'd like to develop, and why?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "13",
     "question": "When was the last time you stepped out of your comfort zone?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "14",
     "question": "What's a decision you're proud of making recently?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "15",
     "question": "How have you shown kindness to yourself today?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "16",
     "question": "Maya Angelou said 'There is no greater agony than bearing an untold story inside you.' What's a story you need to tell?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "17",
@@ -105,31 +105,31 @@
     "id": "18",
     "question": "Marcus Aurelius wrote: 'Very little is needed to make a happy life.' What are your essentials for happiness?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "19",
     "question": "Rumi said, 'The wound is the place where the Light enters you.' What pain has transformed you?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "20",
     "question": "Brené Brown notes, 'Vulnerability is not winning or losing; it's having the courage to show up and be seen.' When have you been truly vulnerable?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "21",
     "question": "Virginia Woolf wrote, 'Lock up your libraries if you like; but there is no gate, no lock, no bolt that you can set upon the freedom of my mind.' What does mental freedom mean to you?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "22",
     "question": "Audre Lorde said, 'I am not free while any woman is unfree, even when her shackles are very different from my own.' How do you understand interconnectedness?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "23",
@@ -153,7 +153,7 @@
     "id": "26",
     "question": "Name three small things that brought you joy today.",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "27",
@@ -165,25 +165,25 @@
     "id": "28",
     "question": "What's something you take for granted that you want to appreciate more?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "29",
     "question": "What unexpected kindness did you experience recently?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "30",
     "question": "Describe a skill or trait you're grateful you've developed.",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "31",
     "question": "Who is someone that makes your life easier, and how?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "32",
@@ -195,13 +195,13 @@
     "id": "33",
     "question": "Name something about your body you're thankful for.",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "34",
     "question": "What comfort do you have today that you didn't have a year ago?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "35",
@@ -213,7 +213,7 @@
     "id": "36",
     "question": "What technology or modern convenience are you most grateful for?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "37",
@@ -225,7 +225,7 @@
     "id": "38",
     "question": "What resources do you have access to that you're thankful for?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "39",
@@ -237,13 +237,13 @@
     "id": "40",
     "question": "Describe a recent mistake and what it taught you.",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "41",
     "question": "What new perspective have you gained in the past week?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "42",
@@ -261,13 +261,13 @@
     "id": "44",
     "question": "What skill are you currently developing?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "45",
     "question": "Describe a boundary you've recently set or want to set.",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "46",
@@ -285,19 +285,19 @@
     "id": "48",
     "question": "What part of your personal growth are you most proud of?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "49",
     "question": "What makes you feel stuck, and how might you create movement?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "50",
     "question": "Describe a fear you're learning to work with.",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "51",
@@ -309,7 +309,7 @@
     "id": "52",
     "question": "What emotion is strongest for you right now? Where do you feel it in your body?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "53",
@@ -333,13 +333,13 @@
     "id": "56",
     "question": "Describe your breath without trying to change it.",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "57",
     "question": "What thoughts are passing through your mind like clouds?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "58",
@@ -351,7 +351,7 @@
     "id": "59",
     "question": "What sounds are around you at this moment?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "60",
@@ -363,19 +363,19 @@
     "id": "61",
     "question": "What does stillness feel like in this moment?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "62",
     "question": "How does your body feel right now, from the inside?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "63",
     "question": "What would it mean to be completely present right now?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "64",
@@ -387,19 +387,19 @@
     "id": "65",
     "question": "What's a habit you'd like to build, and why is it important to you?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "66",
     "question": "What physical sensation are you most aware of in this exact moment?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "67",
     "question": "What's a small act of kindness you witnessed or performed today?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "68",
@@ -417,25 +417,25 @@
     "id": "70",
     "question": "How does your environment affect your current state of mind?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "71",
     "question": "What's a belief you held strongly that has changed over time?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "72",
     "question": "What simple pleasure made you smile today?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "73",
     "question": "James Baldwin wrote, 'Not everything that is faced can be changed, but nothing can be changed until it is faced.' What do you need to face?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "74",
@@ -453,7 +453,7 @@
     "id": "76",
     "question": "What sound, smell, or sight brings you immediate peace?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "77",
@@ -465,85 +465,85 @@
     "id": "78",
     "question": "Toni Morrison said, 'The function of freedom is to free someone else.' How can you contribute to others' freedom?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "79",
     "question": "What's the most meaningful conversation you've had recently?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "80",
     "question": "How do different weather conditions affect your mood and energy?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "81",
     "question": "What personal boundary have you successfully maintained lately?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "82",
     "question": "What aspect of nature are you most grateful for today?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "83",
     "question": "bell hooks wrote, 'Love is an action, never simply a feeling.' How have you acted with love today?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "84",
     "question": "What's something you know now that you wish you'd known sooner?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "85",
     "question": "How does your body feel after a good night's sleep versus a poor one?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "86",
     "question": "What pattern in your life are you ready to change?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "87",
     "question": "What memory never fails to make you smile?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "88",
     "question": "Anne Frank wrote, 'How wonderful it is that nobody need wait a single moment before starting to improve the world.' What small improvement can you make today?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "89",
     "question": "What does your ideal day look like?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "90",
     "question": "Notice your posture right now. How does it reflect your mental state?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "91",
     "question": "What strength have you discovered in yourself recently?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "92",
@@ -555,67 +555,67 @@
     "id": "93",
     "question": "Ralph Waldo Emerson said, 'What lies behind us and what lies before us are tiny matters compared to what lies within us.' What lies within you?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "94",
     "question": "What would you do if you knew you couldn't fail?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "95",
     "question": "What's the most valuable lesson a failure has taught you?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "96",
     "question": "How does the temperature of your breath feel as you inhale and exhale?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "97",
     "question": "What book or story has significantly influenced your perspective?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "98",
     "question": "Which of your personal qualities are you most grateful for?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "99",
     "question": "Aristotle said, 'We are what we repeatedly do. Excellence, then, is not an act, but a habit.' What habits define you?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "100",
     "question": "What recurring thought keeps visiting you lately?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "101",
     "question": "How has a recent challenge revealed your resilience?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "102",
     "question": "What's a small luxury in your life that you appreciate?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "103",
     "question": "Oscar Wilde noted, 'Be yourself; everyone else is already taken.' How are you uniquely you?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "104",
@@ -627,7 +627,7 @@
     "id": "105",
     "question": "Which relationship in your life deserves more attention?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "106",
@@ -639,7 +639,7 @@
     "id": "107",
     "question": "What would complete honesty with yourself reveal right now?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "108",
@@ -651,13 +651,13 @@
     "id": "109",
     "question": "What's a fear you've outgrown?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "110",
     "question": "Maya Angelou said, 'When you learn, teach. When you get, give.' What knowledge or skill can you share with others?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "111",
@@ -675,19 +675,19 @@
     "id": "113",
     "question": "What's something you're looking forward to in the next season?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "114",
     "question": "How does your body respond to stress? Where do you feel it first?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "115",
     "question": "What's a dream you've been hesitant to voice aloud?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "116",
@@ -699,37 +699,37 @@
     "id": "117",
     "question": "What's a small achievement from today that deserves celebration?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "118",
     "question": "How do different types of music affect your emotional state?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "119",
     "question": "What's a belief about yourself that's ready to be updated?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "120",
     "question": "What's the most meaningful compliment you've received?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "121",
     "question": "Virginia Woolf said, 'Arrange whatever pieces come your way.' How are you creating meaning from life's pieces?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "122",
     "question": "What's a question you wish someone would ask you?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "123",
@@ -741,25 +741,25 @@
     "id": "124",
     "question": "What's something you need to forgive yourself for?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "125",
     "question": "What's a childhood memory that still influences you today?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "126",
     "question": "How do you show up differently for others versus yourself?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "127",
     "question": "What's the quality of silence around you right now?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "128",
@@ -777,19 +777,19 @@
     "id": "130",
     "question": "What's the most important thing you've learned about love?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "131",
     "question": "Where in your body do you hold joy? How does it feel physically?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "132",
     "question": "What wisdom have your mistakes given you?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "133",
@@ -825,55 +825,55 @@
     "id": "138",
     "question": "What's a small convenience in your life that makes a big difference?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "139",
     "question": "Thoreau said, 'Not until we are lost do we begin to understand ourselves.' When has being lost led you to insight?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "140",
     "question": "What's the hardest truth you've had to accept about yourself?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "141",
     "question": "What sensations do you notice in your hands right now?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "142",
     "question": "Who has influenced your life in ways they may not know about?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "143",
     "question": "What would you attempt if you had unlimited resources?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "144",
     "question": "Audre Lorde said, 'Your silence will not protect you.' What do you need to speak up about?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "145",
     "question": "What's the most challenging emotion for you to sit with?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "146",
     "question": "How has your definition of success evolved over time?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "147",
@@ -885,13 +885,13 @@
     "id": "148",
     "question": "What would your 80-year-old self want you to know right now?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "149",
     "question": "How does your mood affect your physical posture?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "150",
@@ -909,19 +909,19 @@
     "id": "152",
     "question": "How does your heart rate feel right now? Fast, slow, steady?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "153",
     "question": "What's a piece of advice you wish you'd ignored?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "154",
     "question": "What's a small act of kindness someone did for you that you'll never forget?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "155",
@@ -933,37 +933,37 @@
     "id": "156",
     "question": "What's the difference between who you are and who you pretend to be?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "157",
     "question": "What color dominates your visual field right now?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "158",
     "question": "What's a struggle you're grateful for because it shaped who you are?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "159",
     "question": "What would you do differently if no one could judge you?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "160",
     "question": "Rumi said, 'What you seek is seeking you.' What keeps showing up in your life?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "161",
     "question": "What's an uncomfortable truth you're avoiding?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "162",
@@ -975,13 +975,13 @@
     "id": "163",
     "question": "What's a small decision you made that had a big impact?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "164",
     "question": "What's something you have that others might wish for?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "165",
@@ -993,7 +993,7 @@
     "id": "166",
     "question": "What parts of yourself have you discovered through adversity?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "167",
@@ -1005,19 +1005,19 @@
     "id": "168",
     "question": "Who has believed in you when you didn't believe in yourself?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "169",
     "question": "What's the most valuable thing you've learned from a stranger?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "170",
     "question": "Alice Walker said, 'The most common way people give up their power is by thinking they don't have any.' Where do you hold power?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "171",
@@ -1029,25 +1029,25 @@
     "id": "172",
     "question": "What's the texture of the surface beneath your feet?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "173",
     "question": "What's a gift that keeps on giving in your life?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "174",
     "question": "What would you say to your future self 10 years from now?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "175",
     "question": "Sylvia Plath wrote, 'The worst enemy to creativity is self-doubt.' How does self-doubt show up for you?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "176",
@@ -1065,7 +1065,7 @@
     "id": "178",
     "question": "What's a small thing someone does that always makes your day better?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "179",
@@ -1077,37 +1077,37 @@
     "id": "180",
     "question": "What's a truth about yourself that you're finally ready to acknowledge?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "181",
     "question": "How does the light in your current space affect your mood?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "182",
     "question": "What's a challenge that turned out to be a blessing?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "183",
     "question": "Thich Nhat Hanh said, 'Peace in oneself, peace in the world.' Where do you find inner peace?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "184",
     "question": "What's a question you've been afraid to ask yourself?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "185",
     "question": "What subtle sensations can you notice in your feet right now?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "186",
@@ -1119,7 +1119,7 @@
     "id": "187",
     "question": "Viktor Frankl wrote, 'Between stimulus and response there is a space.' How do you use that space?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "188",
@@ -1131,37 +1131,37 @@
     "id": "189",
     "question": "What emotions are stored in your shoulders right now?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "190",
     "question": "What's a piece of technology you're grateful to have access to?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "191",
     "question": "Rumi said, 'The wound is where the light enters.' How have your wounds transformed into wisdom?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "192",
     "question": "What's a belief about yourself that no longer serves you?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "193",
     "question": "What's the quality of your mind right now - scattered or focused?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "194",
     "question": "What's a relationship in your life that you're particularly thankful for?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "195",
@@ -1179,19 +1179,19 @@
     "id": "197",
     "question": "What's the loudest sensation in your body right now?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "198",
     "question": "What's a lesson from nature that you're grateful to have learned?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "199",
     "question": "Brené Brown said, 'You are imperfect and you are enough.' How do you embrace both?",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "200",
@@ -1203,25 +1203,25 @@
     "id": "201",
     "question": "What goal have you been hesitant to pursue, and what's holding you back?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "202",
     "question": "How would achieving your current goal change your daily life?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "203",
     "question": "What small step could you take today towards a bigger goal?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "204",
     "question": "Think of a goal you've achieved. What strengths helped you succeed?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "205",
@@ -1233,13 +1233,13 @@
     "id": "206",
     "question": "How do your current habits support or hinder your goals?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "207",
     "question": "What would your life look like in 5 years if you achieved all your current goals?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "208",
@@ -1251,25 +1251,25 @@
     "id": "209",
     "question": "What's a goal you've abandoned, and do you want to revisit it?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "210",
     "question": "Who or what inspires you to pursue your goals?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "211",
     "question": "What thought keeps returning to you when you try to be still?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "212",
     "question": "How does tiredness show up in your body and mind today?",
     "category": "mindfulness",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "213",
@@ -1287,19 +1287,19 @@
     "id": "215",
     "question": "What's a convenience in your life that past generations didn't have?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "216",
     "question": "What difficulty are you secretly grateful for?",
     "category": "gratitude",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "217",
     "question": "Which emotion do you need to give more space to?",
     "category": "growth",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "218",
@@ -1317,25 +1317,25 @@
     "id": "220",
     "question": "If you could master any skill overnight, what would it be and why?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "221",
     "question": "What's the most recent thing that made you laugh out loud?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "222",
     "question": "What would you attempt if you knew support was guaranteed?",
     "category": "question",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "223",
     "question": "Pema Chödrön wrote, 'The only way to ease our fear and be truly happy is to acknowledge our fear and look at it directly. Then we can see that the fear is just the echo of an old story.'",
     "category": "quote",
-    "usageCount": 0
+    "usageCount": 1
   },
   {
     "id": "224",
