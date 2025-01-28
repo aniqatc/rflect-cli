@@ -3,11 +3,11 @@ const path = require('path');
 
 /**
  * Test Suite for Reflection Writing Command
- * 
+ *
  * Why a single test? We're simulating real user flow from start to finish.
  * Breaking this into separate tests would require restarting the CLI each time,
  * which loses state and doesn't match how users actually interact with the app.
- * 
+ *
  * The workflow has 3 main prompts:
  * 1. Mood Selection: User scrolls through options (↑/↓ arrows) to choose "peaceful"
  * 2. Editor Launch: After answering a random question, user presses Enter to open editor
@@ -40,7 +40,7 @@ describe('Reflection writing workflow', () => {
       moodHandled: false,
       editorLaunched: false,
       tagsAdded: false,
-      completionConfirmed: false
+      completionConfirmed: false,
     };
 
     // Handle CLI output stream
@@ -72,7 +72,10 @@ describe('Reflection writing workflow', () => {
 
       // --- Final Confirmation ---
       // Clean up when we see success message
-      if (!promptTracker.completionConfirmed && rawOutput.includes('Your reflection has been saved')) {
+      if (
+        !promptTracker.completionConfirmed &&
+        rawOutput.includes('Your reflection has been saved')
+      ) {
         cli.stdout.destroy();
         cli.stderr.destroy();
         cli.kill(9); // Force exit

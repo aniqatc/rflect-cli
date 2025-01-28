@@ -43,13 +43,11 @@ try {
     `;
 
     // Preserve any existing content (like a real editor would)
-    const existingContent = fs.existsSync(filePath)
-      ? fs.readFileSync(filePath, 'utf8')
-      : '';
+    const existingContent = fs.existsSync(filePath) ? fs.readFileSync(filePath, 'utf8') : '';
 
     // Write combined content to target file
     fs.writeFileSync(filePath, `${existingContent}\n${testContent}`, 'utf8');
-    
+
     // Simulate successful editor exit
     process.exit(0); // 0 = success code
   }, 150); // Small delay to mimic editor launch time

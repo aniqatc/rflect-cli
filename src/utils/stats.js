@@ -93,7 +93,7 @@ async function updateStats(config, entry) {
   return { stats, messages };
 }
 
-// update goals 
+// update goals
 async function updateGoals(config, entry) {
   const { wordCount } = entry.content;
   const now = new Date();

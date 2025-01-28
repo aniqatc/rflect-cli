@@ -17,7 +17,7 @@ npm run test
 npm run test:write
 
 # Nuclear option for when tests get weird
-npx jest --clearCache	
+npx jest --clearCache
 ```
 
 ### Debugging Helpers 🐛

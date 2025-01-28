@@ -14,6 +14,7 @@
 ## ✨ Features
 
 🎯 **Thoughtful Prompts**
+
 - Growth and personal development
 - Daily gratitude practice
 - Mindfulness exercises
@@ -21,6 +22,7 @@
 - Quote-inspired reflections
 
 📊 **Progress Tracking**
+
 - Writing streaks and milestones
 - Word count analytics
 - Time spent writing
@@ -28,6 +30,7 @@
 - Entry themes
 
 🔒 **Privacy-First Design**
+
 - Local storage only
 - Offline accessibility
 - Complete data ownership
