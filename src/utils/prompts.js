@@ -1,7 +1,8 @@
 const fs = require('fs').promises;
 const path = require('path');
+const os = require('os');
 
-const promptLocation = path.join(__dirname, '../data/prompts.json');
+const promptLocation = path.join(os.homedir(), '.rflect', 'prompts.json');
 
 async function getAllPrompts() {
   try {

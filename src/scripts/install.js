@@ -13,6 +13,12 @@ async function createRflectDirectory(isReinstall = false) {
     const entriesDirectory = path.join(primaryDirectory, 'entries');
     await fs.mkdir(primaryDirectory, { recursive: true }); // no duplicates
     await fs.mkdir(entriesDirectory, { recursive: true });
+
+    // Copy of prompts.json inside user's rflect folder
+    const sourcePrompts = path.join(__dirname, '../data/prompts.json');
+    const targetPrompts = path.join(primaryDirectory, 'prompts.json');
+    await fs.copyFile(sourcePrompts, targetPrompts);
+
     console.log(styles.success('✨ Directory setup complete!'));
 
     // Initial user config
