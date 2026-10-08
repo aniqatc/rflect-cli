@@ -16,7 +16,7 @@ async function getAllMoods() {
   console.log(styles.header('All Recorded Moods'));
   Object.keys(moods).forEach((mood) => {
     const count = moods[mood].dates.length;
-    const totalEntries = config.stats.totalEntries + config.stats.deletedEntries;
+    const totalEntries = config.stats.totalEntries;
     console.log(
       styles.help(`You were `) +
         styles.value(mood) +
@@ -39,10 +39,19 @@ async function displayMoodCal(targetMood) {
     return;
   }
 
+  // Timestamps are MM-dd-yyyy-HHmm; match both month and year
   const currentMonth = format(now, 'MM');
-  const moodDates = moods[targetMood].dates
-    .filter((date) => date.split('-')[0] === currentMonth)
-    .map((date) => parseInt(date.split('-')[1]));
+  const currentYear = format(now, 'yyyy');
+  const moodDates = [
+    ...new Set(
+      moods[targetMood].dates
+        .filter((date) => {
+          const [month, , year] = date.split('-');
+          return month === currentMonth && year === currentYear;
+        })
+        .map((date) => parseInt(date.split('-')[1], 10))
+    ),
+  ];
   const emoji = targetMood.split(' ')[0];
   const monthCalendar = Calendar().of(now.getFullYear(), now.getMonth()).calendar;
 

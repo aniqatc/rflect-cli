@@ -5,7 +5,6 @@ const inquirer = require('inquirer');
 const { moods } = require('../data/mood');
 const {
   getAllEntries,
-  getLastEntry,
   getEntryDates,
   getEntryByFileName,
   getEntryByTag,
@@ -52,16 +51,30 @@ async function showCommand(options) {
       return;
     }
 
+    const printEntries = (entries, emptyMessage) => {
+      if (entries.length === 0) {
+        console.log(styles.info(`\n${emptyMessage}`));
+        return;
+      }
+      entries.forEach((entry, index) => formatEntryForDisplay(entry, index + 1));
+    };
+
+    // Every option needs at least one entry, so check once up front
+    const allEntries = await getAllEntries();
+    if (allEntries.length === 0) {
+      console.log(styles.info('\nNo entries yet. Start with ') + styles.value('rflect write'));
+      return;
+    }
+
     if (options.all) {
-      const entries = await getAllEntries();
+      const entries = allEntries;
       entries.forEach((entry, index) => {
         formatEntryForDisplay(entry, index + 1);
       });
     }
 
     if (options.recent) {
-      const entry = await getLastEntry();
-      formatEntryForDisplay(entry);
+      formatEntryForDisplay(allEntries[allEntries.length - 1]);
     }
 
     if (options.date) {
@@ -83,6 +96,10 @@ async function showCommand(options) {
 
     if (options.tag) {
       const { tags } = config.stats;
+      if (Object.keys(tags).length === 0) {
+        console.log(styles.info('\nNo tags found. Add tags when you run ') + styles.value('rflect write'));
+        return;
+      }
       const { selectedTag } = await inquirer.prompt([
         {
           type: 'list',
@@ -91,10 +108,7 @@ async function showCommand(options) {
           choices: Object.keys(tags),
         },
       ]);
-      const entries = await getEntryByTag(selectedTag);
-      entries.forEach((entry, index) => {
-        formatEntryForDisplay(entry, index + 1);
-      });
+      printEntries(await getEntryByTag(selectedTag), `No entries tagged #${selectedTag}.`);
     }
 
     if (options.category) {
@@ -107,10 +121,10 @@ async function showCommand(options) {
           choices: categories,
         },
       ]);
-      const entries = await getEntryByPromptCategory(selectedCategory);
-      entries.forEach((entry, index) => {
-        formatEntryForDisplay(entry, index + 1);
-      });
+      printEntries(
+        await getEntryByPromptCategory(selectedCategory),
+        `No entries in the ${selectedCategory} category.`
+      );
     }
 
     if (options.mood) {
@@ -122,10 +136,7 @@ async function showCommand(options) {
           choices: moods,
         },
       ]);
-      const entries = await getEntryByMood(selectedMood);
-      entries.forEach((entry, index) => {
-        formatEntryForDisplay(entry, index + 1);
-      });
+      printEntries(await getEntryByMood(selectedMood), `No entries with mood ${selectedMood}.`);
     }
   } catch (error) {
     console.error(styles.error('Error displaying entries: ') + styles.value(error.message));

@@ -5,7 +5,19 @@ const { getRandomPrompt, incrementPromptUsageCount } = require('../utils/prompts
 const { intervalToDuration } = require('date-fns');
 const { formatDuration } = require('../utils/format');
 const { moods } = require('../data/mood');
-const { saveEntry } = require('../utils/entries');
+const { saveEntry, countWords } = require('../utils/entries');
+
+const EDITOR_PLACEHOLDER = '[Write your reflection here...]';
+const MIN_WORDS = 10;
+
+// Remove the editor placeholder so it isn't saved or counted as words
+const cleanBody = (input) => input.replace(EDITOR_PLACEHOLDER, '').trim();
+
+const validateBody = (input) =>
+  countWords(input) >= MIN_WORDS ||
+  styles.warning(
+    `Your reflection seems a bit short. Please write at least ${MIN_WORDS} words to capture your thoughts.`
+  );
 
 async function writeCommand() {
   try {
@@ -22,7 +34,6 @@ async function writeCommand() {
 
     let body;
     const prompt = await getRandomPrompt();
-    await incrementPromptUsageCount(prompt.id);
 
     const { mood } = await inquirer.prompt([
       {
@@ -41,17 +52,10 @@ async function writeCommand() {
           name: 'body',
           message: styles.prompt(prompt.question + '\n'),
           waitUserInput: true,
-          default: '\n\n[Write your reflection here...]',
+          default: `\n\n${EDITOR_PLACEHOLDER}`,
           // Editor content is validated after closing the editor
-          validate: (input) => {
-            const wordCount = input.trim().split(/\s+/).length;
-            if (wordCount < 10) {
-              return styles.warning(
-                'Your reflection seems a bit short. Please write at least 10 words to capture your thoughts.'
-              );
-            }
-            return true;
-          },
+          filter: cleanBody,
+          validate: validateBody,
         },
       ]));
     } else {
@@ -60,15 +64,8 @@ async function writeCommand() {
           type: 'input',
           name: 'body',
           message: styles.prompt(prompt.question + '\n'),
-          validate: (input) => {
-            const wordCount = input.trim().split(/\s+/).length;
-            if (wordCount < 10) {
-              return styles.warning(
-                'Your reflection seems a bit short. Please write at least 10 words to capture your thoughts.'
-              );
-            }
-            return true;
-          },
+          filter: cleanBody,
+          validate: validateBody,
         },
       ]));
     }
@@ -101,6 +98,9 @@ async function writeCommand() {
       durationString,
       config,
     });
+
+    // Only count the prompt as used once the entry is actually saved
+    await incrementPromptUsageCount(prompt.id);
 
     console.log(styles.success('✨ Your reflection has been saved!'));
     console.log(styles.help('Word Count: ') + styles.number(entry.content.wordCount));

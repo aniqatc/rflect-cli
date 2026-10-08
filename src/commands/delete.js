@@ -5,6 +5,7 @@ const {
   getEntryDates,
   getEntryByFileName,
 } = require('../utils/entries');
+const { removeEntryFromStats } = require('../utils/stats');
 const styles = require('../utils/styles');
 const inquirer = require('inquirer');
 
@@ -65,6 +66,12 @@ async function deleteCommand(options) {
 
           config.stats.totalEntries = 0;
           config.stats.totalWords = 0;
+          // No entries remain, so the tag/mood/category indexes would only point at deleted files
+          config.stats.tags = {};
+          config.stats.moods = {};
+          config.stats.entriesByPromptCategory = Object.fromEntries(
+            Object.keys(config.stats.entriesByPromptCategory || {}).map((category) => [category, 0])
+          );
 
           await updateConfig(config);
 
@@ -84,6 +91,10 @@ async function deleteCommand(options) {
 
     if (options.date) {
       const dates = await getEntryDates();
+      if (dates.length === 0) {
+        console.log(styles.info('\nNo entries to delete.'));
+        return;
+      }
       const answers = await inquirer.prompt([
         {
           type: 'list',
@@ -114,6 +125,11 @@ async function deleteCommand(options) {
         config.stats.deletedEntries = config.stats.deletedEntries + 1;
         config.stats.deletedWords = config.stats.deletedWords + fileToDelete.content.wordCount;
         config.stats.totalWords = config.stats.totalWords - fileToDelete.content.wordCount;
+        const category = fileToDelete.prompt && fileToDelete.prompt.category;
+        if (category && config.stats.entriesByPromptCategory[category] > 0) {
+          config.stats.entriesByPromptCategory[category] -= 1;
+        }
+        config.stats = removeEntryFromStats(config.stats, answers.selectedEntry.filename);
         await updateConfig(config);
         console.log(
           styles.success(`Entry from ${answers.selectedEntry.dateString} deleted successfully.`)
