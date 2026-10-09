@@ -4,9 +4,11 @@ const os = require('os');
 
 const styles = require('../utils/styles');
 
-async function createRflectDirectory(isReinstall = false) {
+async function createRflectDirectory(isReinstall = false, { quiet = false } = {}) {
+  // quiet mode is used when a command repairs a missing setup on the fly
+  const log = quiet ? () => {} : console.log;
   try {
-    console.log(styles.header('🚀 Installing rflect'));
+    log(styles.header('🚀 Installing rflect'));
 
     // Directories needed for rflect
     const primaryDirectory = path.join(os.homedir(), '.rflect');
@@ -17,9 +19,18 @@ async function createRflectDirectory(isReinstall = false) {
     // Copy of prompts.json inside user's rflect folder
     const sourcePrompts = path.join(__dirname, '../data/prompts.json');
     const targetPrompts = path.join(primaryDirectory, 'prompts.json');
-    await fs.copyFile(sourcePrompts, targetPrompts);
+    // Only copy when missing (or on reinstall) so upgrading rflect doesn't wipe prompt usage counts
+    let promptsExist = true;
+    try {
+      await fs.access(targetPrompts);
+    } catch {
+      promptsExist = false;
+    }
+    if (isReinstall || !promptsExist) {
+      await fs.copyFile(sourcePrompts, targetPrompts);
+    }
 
-    console.log(styles.success('✨ Directory setup complete!'));
+    log(styles.success('✨ Directory setup complete!'));
 
     // Initial user config
     const configLocation = path.join(primaryDirectory, 'config.json');
@@ -69,27 +80,27 @@ async function createRflectDirectory(isReinstall = false) {
 
     if (isReinstall) {
       await fs.writeFile(configLocation, JSON.stringify(config, null, 2));
-      console.log(styles.success('Configuration reset to defaults.'));
+      log(styles.success('Configuration reset to defaults.'));
     } else {
       try {
         await fs.access(configLocation);
-        console.log(styles.info(`Found existing configuration: ${configLocation}`));
-        console.log(styles.info(`Use rflect init or rflect config to make adjustments.`));
+        log(styles.info(`Found existing configuration: ${configLocation}`));
+        log(styles.info(`Use rflect init or rflect config to make adjustments.`));
       } catch {
         await fs.writeFile(configLocation, JSON.stringify(config, null, 2));
-        console.log(styles.success(`Created initial configuration file: ${configLocation}.`));
+        log(styles.success(`Created initial configuration file: ${configLocation}.`));
       }
     }
 
     // Welcome and next steps
-    console.log(styles.header('👋🏼 Welcome!'));
-    console.log(styles.info('Get started with:'));
-    console.log(styles.help('1. Initialize your profile:'));
-    console.log(styles.value('   rflect init'));
-    console.log(styles.help('2. Start writing:'));
-    console.log(styles.value('   rflect write'));
-    console.log(styles.help('3. View your entries:'));
-    console.log(styles.value('   rflect show --recent\n'));
+    log(styles.header('👋🏼 Welcome!'));
+    log(styles.info('Get started with:'));
+    log(styles.help('1. Initialize your profile:'));
+    log(styles.value('   rflect init'));
+    log(styles.help('2. Start writing:'));
+    log(styles.value('   rflect write'));
+    log(styles.help('3. View your entries:'));
+    log(styles.value('   rflect show --recent\n'));
     return true;
   } catch (error) {
     console.error(styles.error('\nSetup error: ') + styles.value(error.message));

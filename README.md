@@ -149,7 +149,7 @@ rflect upcoming
 - **Core**: `node.js`, `commander`, `inquirer`
 - **Date Handling**: `calendar-js`, `date-fns`
 - **Styling**: `chalk`
-- **Development**: `nodemon`, `eslint`, `prettier`
+- **Development**: `eslint`, `prettier`, `jest`
 
 #### 🔧 Requirements
 
@@ -159,7 +159,8 @@ rflect upcoming
 #### ⌨️ Scripts
 
 ```bash
-npm run dev     # Run with nodemon for development
+npm start       # Run the CLI locally
+npm test        # Run tests with Jest
 npm run lint    # Run ESLint checks
 npm run format  # Format code with Prettier
 ```

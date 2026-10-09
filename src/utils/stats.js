@@ -1,10 +1,17 @@
 const { updateConfig } = require('./config');
-const { isToday, isYesterday, parseISO, startOfWeek, startOfMonth } = require('date-fns');
+const {
+  isToday,
+  isYesterday,
+  parseISO,
+  startOfWeek,
+  startOfMonth,
+  differenceInCalendarDays,
+} = require('date-fns');
 const styles = require('./styles');
 
-async function updateStatsAndGoals(config, entry) {
+async function updateStatsAndGoals(config, entry, filename) {
   try {
-    const { stats, messages: statsMessages } = await updateStats(config, entry);
+    const { stats, messages: statsMessages } = await updateStats(config, entry, filename);
     const { goals, messages: goalMessages } = await updateGoals(config, entry);
 
     const updatedConfig = {
@@ -23,13 +30,13 @@ async function updateStatsAndGoals(config, entry) {
   }
 }
 
-async function updateStats(config, entry) {
+async function updateStats(config, entry, filename) {
   const { content, metadata, prompt } = entry;
   const { wordCount, tags, mood } = content;
   const { durationInMinutes, timestamp } = metadata;
   const now = new Date();
   const messages = [];
-  const entryFile = `${timestamp}.json`;
+  const entryFile = filename || `${timestamp}.json`;
 
   // new stats object with updated counts
   const stats = {
@@ -48,9 +55,12 @@ async function updateStats(config, entry) {
       ...config.stats.entriesByPromptCategory,
       [prompt.category]: (config.stats.entriesByPromptCategory[prompt.category] || 0) + 1,
     },
-    tags: {
-      ...config.stats.tags,
-    },
+    tags: Object.fromEntries(
+      Object.entries(config.stats.tags || {}).map(([tag, data]) => [
+        tag,
+        { ...data, files: [...data.files] },
+      ])
+    ),
     moods: {
       ...config.stats.moods,
       [mood]: {
@@ -91,6 +101,40 @@ async function updateStats(config, entry) {
   }
 
   return { stats, messages };
+}
+
+// The saved streak is only updated when writing, so a missed day isn't reflected
+// until the next entry. Use this when displaying the streak.
+function getCurrentStreak(stats, now = new Date()) {
+  if (!stats.lastEntry) return 0;
+  const lastEntry = parseISO(stats.lastEntry);
+  const daysSince = differenceInCalendarDays(now, lastEntry);
+  return daysSince <= 1 ? stats.currentStreak || 0 : 0;
+}
+
+// Removes a deleted entry's file from the tag and mood indexes in stats,
+// dropping any tag or mood that no longer has entries
+function removeEntryFromStats(stats, filename) {
+  const tags = {};
+  for (const [tag, data] of Object.entries(stats.tags || {})) {
+    const files = data.files.filter((file) => file !== filename);
+    if (files.length > 0) tags[tag] = { ...data, files };
+  }
+
+  const moods = {};
+  for (const [mood, data] of Object.entries(stats.moods || {})) {
+    const dates = [];
+    const files = [];
+    data.files.forEach((file, index) => {
+      if (file !== filename) {
+        files.push(file);
+        dates.push(data.dates[index]);
+      }
+    });
+    if (files.length > 0) moods[mood] = { dates, files };
+  }
+
+  return { ...stats, tags, moods };
 }
 
 // update goals 
@@ -159,4 +203,9 @@ function formatGoalMessage(progress, goal, type, unit) {
   return styles.info(`📝 ${remaining} more ${unitText} to reach your ${type} goal`);
 }
 
-module.exports = { updateStatsAndGoals };
+module.exports = {
+  updateStatsAndGoals,
+  getCurrentStreak,
+  removeEntryFromStats,
+  shouldResetCounter,
+};

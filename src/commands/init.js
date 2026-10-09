@@ -108,7 +108,7 @@ async function initCommand() {
       goal: answers.entryGoal || 0,
     };
     config.goals.words = {
-      ...config.goals.entries,
+      ...config.goals.words,
       type: answers.wordCountFrequency || null,
       goal: answers.wordCountGoal || 0,
     };
@@ -128,14 +128,18 @@ async function initCommand() {
       console.log(styles.info(`\nYour goals:`));
       console.log(
         styles.help(
-          `- Write ${styles.number(answers.entryGoal)} entries ${styles.number(
+          `- Write ${styles.number(answers.entryGoal)} ${
+            answers.entryGoal === 1 ? 'entry' : 'entries'
+          } ${styles.number(
             answers.entryFrequency
           )}`
         )
       );
       console.log(
         styles.help(
-          `- Write ${styles.number(answers.wordCountGoal)} words ${styles.number(
+          `- Write ${styles.number(answers.wordCountGoal)} ${
+            answers.wordCountGoal === 1 ? 'word' : 'words'
+          } ${styles.number(
             answers.wordCountFrequency
           )}`
         )

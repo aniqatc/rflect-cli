@@ -2,6 +2,7 @@ const { checkConfig } = require('../utils/config');
 const styles = require('../utils/styles');
 const { format, differenceInDays } = require('date-fns');
 const { getShortestLongestEntryDuration } = require('../utils/entries');
+const { getCurrentStreak } = require('../utils/stats');
 
 async function statsCommand(options) {
   try {
@@ -37,6 +38,7 @@ async function statsCommand(options) {
     }
 
     const { goals, stats } = config;
+    const currentStreak = getCurrentStreak(stats);
     const daysSinceCreation = differenceInDays(new Date(), new Date(config.user.createdAt));
 
     if (options.all) {
@@ -60,7 +62,7 @@ async function statsCommand(options) {
 
       // Streak Information
       console.log(styles.subheader('Writing Streak'));
-      console.log(styles.info('Current Streak: ') + styles.number(`${stats.currentStreak} days`));
+      console.log(styles.info('Current Streak: ') + styles.number(`${currentStreak} days`));
       console.log(styles.info('Longest Streak: ') + styles.number(`${stats.longestStreak} days`));
 
       // Writing Duration Statistics
@@ -116,17 +118,17 @@ async function statsCommand(options) {
     if (options.streak) {
       console.log(styles.header('Writing Streak'));
 
-      console.log(styles.info('Current Streak: ') + styles.number(`${stats.currentStreak} days`));
+      console.log(styles.info('Current Streak: ') + styles.number(`${currentStreak} days`));
       console.log(styles.info('Longest Streak: ') + styles.number(`${stats.longestStreak} days`));
 
-      if (stats.currentStreak === 0) {
+      if (currentStreak === 0) {
         console.log(styles.help('Start a new streak by writing today!'));
-      } else if (stats.currentStreak === stats.longestStreak) {
+      } else if (currentStreak === stats.longestStreak) {
         console.log(styles.success("🔥 You're on your best streak ever! Keep it going!"));
-      } else if (stats.currentStreak > 0) {
-        const daysToRecord = stats.longestStreak - stats.currentStreak;
+      } else if (currentStreak > 0) {
+        const daysToRecord = stats.longestStreak - currentStreak;
         console.log(
-          stats.currentStreak === 1
+          currentStreak === 1
             ? styles.success('🎯 Great start! Write again tomorrow to keep your streak alive.')
             : styles.success(`🔥 Keep writing! ${daysToRecord} more days to beat your record.`)
         );
